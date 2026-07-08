@@ -95,17 +95,15 @@ fetch("./pro_enn.geojson")
             layer.bindPopup(`
                 <b>${p.name}</b><br>
 
-                ID：${p.id}<br>
-
-                名称：${p.name}<br>
+                ID：${p.id || p["名称"] || "名称なし"}<br>
                 
-                カテゴリ：${p.Category}<br>
+                カテゴリ：${p.Category || p["ID"] || ""}<br>
 
-                営業時間：${p.time}<br>
+                営業時間：${p.time || p["営業時間"] || ""}<br>
 
-                定休日：${p.off}<br>
+                定休日：${p.off || p["定休日"] || ""}<br>
 
-                備考：${p.other}
+                備考：${p.other || p["備考"] || ""}
             `);
 
         }
