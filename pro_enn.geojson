@@ -1,0 +1,743 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.3602897,
+          33.97356285
+        ]
+      },
+      "properties": {
+        "id": 1,
+        "name": "ペプシ",
+        "Category": "自販機",
+        "time": "なし",
+        "off": "なし",
+        "other": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.3627115,
+          33.9729082
+        ]
+      },
+      "properties": {
+        "id": 2,
+        "name": "ペプシ",
+        "Category": "自販機",
+        "time": "なし",
+        "off": "なし",
+        "other": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.3626096,
+          33.97289541
+        ]
+      },
+      "properties": {
+        "id": 3,
+        "name": "ペプシ",
+        "Category": "自販機",
+        "time": "なし",
+        "off": "なし",
+        "other": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.3457274,
+          33.96917666
+        ]
+      },
+      "properties": {
+        "id": 4,
+        "name": "コンビニ（ファミマ）",
+        "Category": "お店",
+        "time": "24時間",
+        "off": "なし",
+        "other": "日焼け止め・水・塩分チャージなど、、熱中症対策グッズを買うことができます"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.3676746,
+          33.9736052
+        ]
+      },
+      "properties": {
+        "id": 5,
+        "name": "コカコーラ",
+        "Category": "自販機",
+        "time": "なし",
+        "off": "なし",
+        "other": "道の駅に5個くらいある"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.3488537,
+          33.96770845
+        ]
+      },
+      "properties": {
+        "id": 6,
+        "name": "ABCショップやすおか",
+        "Category": "お店",
+        "time": "8:00-19:00",
+        "off": "日曜日",
+        "other": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.3425208,
+          33.96834864
+        ]
+      },
+      "properties": {
+        "id": 7,
+        "name": "ショップかたやま２１",
+        "Category": "お店",
+        "time": "8:00-20:00",
+        "off": "日曜日",
+        "other": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.3619314,
+          33.97174018
+        ]
+      },
+      "properties": {
+        "id": 8,
+        "name": "脇道",
+        "Category": "激アツ日陰スポット",
+        "time": "なし",
+        "off": "なし",
+        "other": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.3597873,
+          33.96755
+        ]
+      },
+      "properties": {
+        "id": 9,
+        "name": "林道",
+        "Category": "激アツ日陰スポット",
+        "time": "なし",
+        "off": "なし",
+        "other": "ファミマやコンビニへ行く時に通る"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.3599201,
+          33.97360031
+        ]
+      },
+      "properties": {
+        "id": 10,
+        "name": "OFFICE横桜並木",
+        "Category": "激アツ日陰スポット",
+        "time": "なし",
+        "off": "なし",
+        "other": "桜が咲く時期になればとても綺麗な枝垂れ桜が楽しめます。\n普通に道路なので車に注意⚠️"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.3700973,
+          33.9696937
+        ]
+      },
+      "properties": {
+        "id": 11,
+        "name": "道",
+        "Category": "激アツ日陰スポット",
+        "time": "なし",
+        "off": "なし",
+        "other": "神山ビールやコットンフィールドへ行く道"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.4236123,
+          34.02274026
+        ]
+      },
+      "properties": {
+        "id": 12,
+        "name": "イルローザの森",
+        "Category": "自販機",
+        "time": "なし",
+        "off": "なし",
+        "other": "神山町の森林公園で、神山町の中で更に自然を感じたいときはおすすめ！"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.3618199,
+          33.97354626
+        ]
+      },
+      "properties": {
+        "id": 13,
+        "name": "homeとofficeの間の一本道",
+        "Category": "アチアチ日向危険スポット",
+        "time": "なし",
+        "off": "なし",
+        "other": "陰になる場所がなく、日がサンサンと出てる時は熱いかも。"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.3668005,
+          33.97350849
+        ]
+      },
+      "properties": {
+        "id": 14,
+        "name": "道の駅へのみち",
+        "Category": "アチアチ日向危険スポット",
+        "time": "なし",
+        "off": "なし",
+        "other": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.3312753,
+          33.96561101
+        ]
+      },
+      "properties": {
+        "id": 15,
+        "name": "ヤマザキショップ",
+        "Category": "お店",
+        "time": "6:00-19:00",
+        "off": "なし",
+        "other": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.3583497,
+          33.96972671
+        ]
+      },
+      "properties": {
+        "id": 16,
+        "name": "すだっちこクラブ",
+        "Category": "休憩（涼しい）スポッツ",
+        "time": "特定不可",
+        "off": "なし",
+        "other": "学童"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.3612607,
+          33.97664559
+        ]
+      },
+      "properties": {
+        "id": 17,
+        "name": "SHIZQ LAB.の道",
+        "Category": "激アツ日陰スポット",
+        "time": "なし",
+        "off": "なし",
+        "other": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.3692111,
+          33.97407046
+        ]
+      },
+      "properties": {
+        "id": 18,
+        "name": "おうち診療所",
+        "Category": "病院",
+        "time": "9:00-17:00",
+        "off": "土曜日・日曜日",
+        "other": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.3612932,
+          33.97080264
+        ]
+      },
+      "properties": {
+        "id": 19,
+        "name": "鮎喰川コモン",
+        "Category": "休憩（涼しい）スポッツ",
+        "time": "9:00-18:00",
+        "off": "火曜日",
+        "other": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.3682989,
+          33.97285389
+        ]
+      },
+      "properties": {
+        "id": 20,
+        "name": "大粟山神社",
+        "Category": "休憩（涼しい）スポッツ",
+        "time": "なし",
+        "off": "なし",
+        "other": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.3480023,
+          33.96776362
+        ]
+      },
+      "properties": {
+        "id": 21,
+        "name": "豆ちよ",
+        "Category": "お店",
+        "time": "10:00-17:00",
+        "off": "月曜日",
+        "other": "冷たい飲み物のめるよ"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.3354036,
+          33.95079627
+        ]
+      },
+      "properties": {
+        "id": 22,
+        "name": "雨乞いの滝（びみょ）",
+        "Category": "激アツ日陰スポット",
+        "time": "なし",
+        "off": "なし",
+        "other": "滝周辺は涼しいけど道中は暑いよ"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.3717757,
+          33.96812233
+        ]
+      },
+      "properties": {
+        "id": 23,
+        "name": "森の学校みっけ",
+        "Category": "休憩（涼しい）スポッツ",
+        "time": "特定不可",
+        "off": "なし",
+        "other": "森の中にあるので避暑地。"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.3697624,
+          33.96920182
+        ]
+      },
+      "properties": {
+        "id": 24,
+        "name": "コットンフィールド",
+        "Category": "休憩（涼しい）スポッツ",
+        "time": "24時間",
+        "off": "なし",
+        "other": "自然豊かなキャンプ場"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.3671158,
+          33.973719
+        ]
+      },
+      "properties": {
+        "id": 25,
+        "name": "道の駅",
+        "Category": "お店, 休憩（涼しい）スポッツ",
+        "time": "9:00-17:00",
+        "off": "なし",
+        "other": "自販機、ベンチあり"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.3708339,
+          33.9719588
+        ]
+      },
+      "properties": {
+        "id": 26,
+        "name": "温泉",
+        "Category": "お店, 休憩（涼しい）スポッツ",
+        "time": "10:00-20:00",
+        "off": "第４火曜日",
+        "other": "無料休憩所あり"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.370938,
+          33.97507931
+        ]
+      },
+      "properties": {
+        "id": 27,
+        "name": "粟カフェ",
+        "Category": "お店, 休憩（涼しい）スポッツ",
+        "time": "11:30-16:00",
+        "off": "木曜日・金曜日",
+        "other": "ケーキが絶品"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.3705554,
+          33.96957663
+        ]
+      },
+      "properties": {
+        "id": 28,
+        "name": "神山ビール",
+        "Category": "お店, 休憩（涼しい）スポッツ",
+        "time": "土曜日：12:00-18:00\n日曜日：10:00-18:00",
+        "off": "月曜日・火曜日・水曜日・木曜日・金曜日",
+        "other": "ビールだけじゃなく、\nトーストも焼いてくれます"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.3739264,
+          33.978209
+        ]
+      },
+      "properties": {
+        "id": 29,
+        "name": "松葉庵",
+        "Category": "お店, 休憩（涼しい）スポッツ",
+        "time": "10:00-18:00",
+        "off": "火曜日",
+        "other": "神山町に愛される喫茶店。\nコーヒーや定食が楽しめます。"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.361519,
+          33.97046986
+        ]
+      },
+      "properties": {
+        "id": 30,
+        "name": "鮎喰川（高専に近い所）",
+        "Category": "休憩（涼しい）スポッツ, 激アツ日陰スポット",
+        "time": "なし",
+        "off": "なし",
+        "other": "浅いところは浅く、深いところは深いので子供から大人まで楽しめる。"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.3544245,
+          33.96814206
+        ]
+      },
+      "properties": {
+        "id": 31,
+        "name": "鮎喰川（コンビニ近い所）",
+        "Category": "激アツ日陰スポット, 休憩（涼しい）スポッツ",
+        "time": "なし",
+        "off": "なし",
+        "other": "深いので川泳ぎ上級者向け"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.3764652,
+          33.97998377
+        ]
+      },
+      "properties": {
+        "id": 32,
+        "name": "林商店",
+        "Category": "休憩（涼しい）スポッツ",
+        "time": "11:00-14:00",
+        "off": "月曜日・木曜日",
+        "other": "お母さんが作ったような温かい惣菜とうどんが楽しめます。"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.346927,
+          33.96910247
+        ]
+      },
+      "properties": {
+        "id": 33,
+        "name": "かま屋",
+        "Category": "休憩（涼しい）スポッツ",
+        "time": "11:00-15:00",
+        "off": "月曜日・火曜日",
+        "other": "神山町Food Hub Projectによる、地産地食をモットーにした、神山産の農作物をふんだんに使った食堂・パン・食品店。"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.3697666,
+          33.97135022
+        ]
+      },
+      "properties": {
+        "id": 34,
+        "name": "温泉近くの川",
+        "Category": "激アツ日陰スポット",
+        "time": "なし",
+        "off": "なし",
+        "other": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.3468778,
+          33.96876529
+        ]
+      },
+      "properties": {
+        "id": 35,
+        "name": "ファミマ・城西のとこのみち",
+        "Category": "アチアチ日向危険スポット",
+        "time": "なし",
+        "off": "なし",
+        "other": "遮蔽物がなく気温が上がりがちです。"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.3467554,
+          33.96740281
+        ]
+      },
+      "properties": {
+        "id": 36,
+        "name": "寄井座のみち",
+        "Category": "アチアチ日向危険スポット",
+        "time": "なし",
+        "off": "なし",
+        "other": "遮蔽物がなく気温が上がりがちです。"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.361484,
+          33.97609858
+        ]
+      },
+      "properties": {
+        "id": 38,
+        "name": "小川橋",
+        "Category": "激アツ日陰スポット",
+        "time": "なし",
+        "off": "なし",
+        "other": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.369404,
+          33.97181317
+        ]
+      },
+      "properties": {
+        "id": 39,
+        "name": "農村ふれあい公園",
+        "Category": "激アツ日陰スポット, 休憩（涼しい）スポッツ",
+        "time": "なし",
+        "off": "なし",
+        "other": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.3621676,
+          33.97609939
+        ]
+      },
+      "properties": {
+        "id": 40,
+        "name": "木の近くの道",
+        "Category": "激アツ日陰スポット",
+        "time": "なし",
+        "off": "なし",
+        "other": "朝に影が出やすいから、朝の散歩におすすめ"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.3634453,
+          33.95919781
+        ]
+      },
+      "properties": {
+        "id": 41,
+        "name": "大久保の山道",
+        "Category": "激アツ日陰スポット",
+        "time": "なし",
+        "off": "なし",
+        "other": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.3634728,
+          33.959759
+        ]
+      },
+      "properties": {
+        "id": 42,
+        "name": "のりのおすすめ飛び込みスポット",
+        "Category": "激アツ日陰スポット, その他",
+        "time": "なし",
+        "off": "なし",
+        "other": "上級者向けそう"
+      }
+    }
+  ]
+}
