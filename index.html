@@ -93,17 +93,11 @@ fetch("./pro_enn.geojson")
             // ここを自由に編集してください
             //
             layer.bindPopup(`
-                <b>${p.name}</b><br>
+               <b>${p.name}</b><br>
 
-                ID：${p.id || p["名称"] || "名称なし"}<br>
-                
-                カテゴリ：${p.Category || p["ID"] || ""}<br>
+                ID：${p.id}<br>
 
-                営業時間：${p.time || p["営業時間"] || ""}<br>
-
-                定休日：${p.off || p["定休日"] || ""}<br>
-
-                備考：${p.other || p["備考"] || ""}
+                名称：${p.name}<br>
             `);
 
         }
