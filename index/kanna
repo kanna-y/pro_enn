@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>オープンデータマップ</title>
+
+  <!-- Leaflet のCSSを読み込む -->
+  <link rel="stylesheet"
+        href="https://kanna-y.github.io/pro_enn/pro_enn.geojson" />
+
+  <style>
+    /* 地図を画面いっぱいに表示 */
+    html, body {
+      margin: 0;
+      height: 100%;
+    }
+
+    #map {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+<div id="map"></div>
+
+<!-- Leaflet のJavaScriptを読み込む -->
+<script src="https://kanna-y.github.io/pro_enn/pro_enn.geojson"></script>
+
+<script>
+
+//
+// ================================
+// ① 地図の初期設定
+// ================================
+//
+// setView([緯度, 経度], ズームレベル)
+// 中心位置を変更するときはここを書き換える
+//
+const map = L.map('map').setView(
+    [33.9720, 134.3611],   // 神山まるごと高専
+    15
+);
+
+//
+// ================================
+// ② 背景地図（OpenStreetMap）
+// ================================
+//
+L.tileLayer(
+    'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    {
+        attribution:
+        '&copy; OpenStreetMap contributors'
+    }
+).addTo(map);
+
+//
+// ================================
+// ③ GeoJSONを読み込む
+// ================================
+//
+// dataフォルダのGeoJSONを読み込む
+//
+// 例)
+// data/street_lamps.geojson
+// data/toilet.geojson
+//
+fetch("./data/street_lamps.geojson")
+
+.then(response => response.json())
+
+.then(data => {
+
+    //
+    // ================================
+    // ④ GeoJSONを地図へ追加
+    // ================================
+    //
+    const layer = L.geoJSON(data, {
+
+        //
+        // マーカーをクリックしたときに表示する内容
+        //
+        onEachFeature: function(feature, layer){
+
+            const p = feature.properties;
+
+            //
+            // ↓↓↓
+            // ここを自由に編集してください
+            //
+            layer.bindPopup(`
+                <b>${p.name}</b><br>
+
+                ID：${p.id}<br>
+
+                種別：${p.highway}<br>
+
+                ランプ：${p.lamp_type}<br>
+
+                支柱：${p.support}
+            `);
+
+        }
+
+    }).addTo(map);
+
+    //
+    // ================================
+    // ⑤ GeoJSON全体が見えるように拡大縮小
+    // ================================
+    //
+    map.fitBounds(layer.getBounds());
+
+})
+
+.catch(error => {
+
+    console.error(error);
+
+    alert("GeoJSONを読み込めませんでした。");
+
+});
+
+</script>
+
+</body>
+</html>
