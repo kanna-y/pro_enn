@@ -15,86 +15,21 @@
 }
 
 /* ── ページ全体 ── */
-body {
-  background: linear-gradient(135deg, #0f172a 0%, #1e3a2f 100%);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 32px 16px;
-  font-family: 'Hiragino Kaku Gothic ProN','Hiragino Sans',sans-serif;
-  gap: 16px;
-}
-
-/* ラベル */
-.proto-label {
-  color: rgba(255,255,255,0.5);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-/* ── iPhone フレーム ── */
-.phone-frame {
-  width: 390px;
-  height: 844px;
-  background: #1a1a1a;
-  border-radius: 54px;
-  padding: 12px;
-  box-shadow:
-    0 0 0 2px #333,
-    0 0 0 4px #555,
-    0 40px 80px rgba(0,0,0,0.7),
-    inset 0 0 0 2px #000;
-  position: relative;
-  flex-shrink: 0;
-}
-
-/* ダイナミックアイランド */
-.dynamic-island {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 120px;
-  height: 34px;
-  background: #000;
-  border-radius: 20px;
-  z-index: 9999;
-}
-
-/* ステータスバー */
-.status-bar {
-  position: absolute;
-  top: 16px;
-  left: 28px;
-  right: 28px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 9998;
-  pointer-events: none;
-}
-.status-time { color:#fff; font-size:15px; font-weight:700; padding-left:4px; }
-.status-icons { display:flex; align-items:center; gap:5px; }
-.status-icons span { color:#fff; font-size:12px; }
-
-/* スクリーン */
-.phone-screen {
+html, body {
   width: 100%;
   height: 100%;
-  border-radius: 44px;
   overflow: hidden;
-  position: relative;
+}
+
+body {
+  margin: 0;
   background: #f0fdf4;
+  font-family: 'Hiragino Kaku Gothic ProN','Hiragino Sans',sans-serif;
 }
 
 /* ── アプリ内UI ── */
 #app {
-  position: absolute;
+  position: fixed;
   inset: 0;
   display: flex;
   flex-direction: column;
@@ -113,7 +48,7 @@ body {
   position: absolute;
   top: 0; left: 0; right: 0;
   z-index: 500;
-  padding: 56px 12px 0;
+  padding: calc(env(safe-area-inset-top, 0px) + 12px) 12px 0;
   pointer-events: none;
 }
 #searchbox {
@@ -262,9 +197,6 @@ body {
 .wc-item span { font-weight:700; color:var(--text); }
 #wc-alert { margin-top:7px; background:#fef3c7; border-radius:8px; padding:5px 8px; font-size:10px; color:#92400e; font-weight:600; }
 
-/* ホームインジケーター */
-.home-indicator { position:absolute; bottom:8px; left:50%; transform:translateX(-50%); width:120px; height:5px; background:rgba(0,0,0,0.3); border-radius:3px; z-index:9999; pointer-events:none; }
-
 /* マーカー */
 .mkr { display:flex; align-items:center; justify-content:center; border-radius:50%; border:2.5px solid #fff; box-shadow:0 2px 8px rgba(0,0,0,.3); cursor:pointer; }
 .user-dot { width:14px; height:14px; border-radius:50%; background:#3b82f6; border:3px solid #fff; animation:pulse 2s infinite; }
@@ -274,7 +206,7 @@ body {
 #route-loading { display:none; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); z-index:800; background:rgba(0,0,0,.72); color:#fff; padding:12px 20px; border-radius:16px; font-size:12px; font-weight:600; }
 
 /* ボトムナビ */
-#bottom-nav { position:absolute; bottom:0; left:0; right:0; z-index:450; background:rgba(255,255,255,0.96); backdrop-filter:blur(12px); border-top:1px solid var(--border); display:flex; padding:6px 0 18px; }
+#bottom-nav { position:absolute; bottom:0; left:0; right:0; z-index:450; background:rgba(255,255,255,0.96); backdrop-filter:blur(12px); border-top:1px solid var(--border); display:flex; padding:6px 0 calc(env(safe-area-inset-bottom, 0px) + 8px); }
 .nav-item { flex:1; display:flex; flex-direction:column; align-items:center; gap:2px; cursor:pointer; padding:4px 0; color:var(--muted); transition:color .15s; }
 .nav-item.on { color:var(--green); }
 .nav-icon { font-size:20px; }
@@ -282,26 +214,7 @@ body {
 </style>
 </head>
 <body>
-
-<div class="proto-label">📱 かげさんぽ — スマホプロトタイプ</div>
-
-<div class="phone-frame">
-  <!-- ダイナミックアイランド -->
-  <div class="dynamic-island"></div>
-
-  <!-- ステータスバー -->
-  <div class="status-bar">
-    <span class="status-time" id="status-time">9:41</span>
-    <div class="status-icons">
-      <span>▌▌▌</span>
-      <span>WiFi</span>
-      <span id="status-battery">🔋</span>
-    </div>
-  </div>
-
-  <!-- スクリーン -->
-  <div class="phone-screen">
-    <div id="app">
+<div id="app">
 
       <!-- 地図 -->
       <div id="map"></div>
@@ -404,59 +317,73 @@ body {
         </div>
       </div>
 
-      <!-- ホームインジケーター -->
-      <div class="home-indicator"></div>
-
-    </div><!-- /#app -->
-  </div><!-- /.phone-screen -->
-</div><!-- /.phone-frame -->
-
-<div class="proto-label">タップ・スクロール操作できます</div>
+</div><!-- /#app -->
 
 <script>
-// ステータスバー時刻
-function updateTime(){const n=new Date();document.getElementById('status-time').textContent=`${n.getHours()}:${String(n.getMinutes()).padStart(2,'0')}`;}
-updateTime(); setInterval(updateTime,10000);
-
 // ══════════════════════════════
 // スポットデータ
 // ══════════════════════════════
-const SPOTS=[
-  {id:1,  name:"ペプシ自販機①",            cat:"vending",  lat:33.97356285,lng:134.3602897,note:"",hours:"なし",closed:""},
-  {id:2,  name:"ペプシ自販機②",            cat:"vending",  lat:33.9729082, lng:134.3627115,note:"",hours:"なし",closed:""},
-  {id:3,  name:"ペプシ自販機③",            cat:"vending",  lat:33.97289541,lng:134.3626096,note:"",hours:"なし",closed:""},
-  {id:5,  name:"コカコーラ自販機（道の駅）",cat:"vending",  lat:33.9736052, lng:134.3676746,note:"道の駅に5個くらいある",hours:"なし",closed:""},
-  {id:4,  name:"コンビニ（ファミマ）",      cat:"shop",     lat:33.96917666,lng:134.3457274,note:"",hours:"24時間",closed:""},
-  {id:"p",name:"ABCショップ やすおか",     cat:"shop",     lat:33.96770845,lng:134.3488537,note:"",hours:"8:00〜19:00",closed:"日曜日"},
-  {id:7,  name:"ショップ かたやま21",      cat:"shop",     lat:33.96834864,lng:134.3425208,note:"",hours:"8:00〜20:00",closed:"日曜日"},
-  {id:15, name:"ヤマザキショップ",         cat:"shop",     lat:33.96561101,lng:134.3312753,note:"",hours:"6:00〜19:00",closed:""},
-  {id:21, name:"豆ちよ",                  cat:"shop",     lat:33.96776362,lng:134.3480023,note:"冷たい飲み物のめるよ",hours:"10:00〜17:00",closed:"月曜日"},
-  {id:25, name:"道の駅",                  cat:"shop",     lat:33.973719,  lng:134.3671158,note:"自販機・ベンチあり",hours:"9:00〜17:00",closed:""},
-  {id:26, name:"温泉",                    cat:"shop",     lat:33.9719588, lng:134.3708339,note:"無料休憩所あり",hours:"10:00〜20:00",closed:"第４火曜日"},
-  {id:27, name:"粟カフェ",               cat:"shop",     lat:33.97507931,lng:134.370938, note:"ケーキが絶品",hours:"11:30〜16:00",closed:"木曜日・金曜日"},
-  {id:28, name:"神山ビール",             cat:"shop",     lat:33.96957663,lng:134.3705554,note:"トーストも焼いてくれます",hours:"土12:00〜18:00 / 日10:00〜18:00",closed:"月〜金"},
-  {id:29, name:"松葉庵",                cat:"shop",     lat:33.978209,  lng:134.3739264,note:"コーヒーや定食が楽しめます。",hours:"10:00〜18:00",closed:"火曜日"},
-  {id:32, name:"林商店",               cat:"shop",     lat:33.97998377,lng:134.3764652,note:"温かい惣菜とうどん",hours:"11:00〜14:00",closed:"月曜日・木曜日"},
-  {id:33, name:"かま屋",               cat:"shop",     lat:33.96910247,lng:134.346927, note:"神山産農作物の食堂・パン・食品店",hours:"11:00〜15:00",closed:"月曜日・火曜日"},
-  {id:8,  name:"脇道",                 cat:"shade",    lat:33.97174018,lng:134.3619314,note:"",hours:"なし",closed:""},
-  {id:9,  name:"林道（ファミマへの道）",cat:"shade",    lat:33.96755,   lng:134.3597873,note:"ファミマやコンビニへ行く時に通る",hours:"なし",closed:""},
-  {id:10, name:"OFFICE横 桜並木",      cat:"shade",    lat:33.97360031,lng:134.3599201,note:"枝垂れ桜が楽しめます。車に注意⚠️",hours:"なし",closed:""},
-  {id:11, name:"道（神山ビール方面）",  cat:"shade",    lat:33.9696937, lng:134.3700973,note:"神山ビールへ行く道",hours:"なし",closed:""},
-  {id:17, name:"SHIZQ LAB.の道",      cat:"shade",    lat:33.97664559,lng:134.3612607,note:"",hours:"なし",closed:""},
-  {id:30, name:"鮎喰川（高専近く）",   cat:"shade",    lat:33.97046986,lng:134.361519, note:"子供から大人まで楽しめる。",hours:"なし",closed:""},
-  {id:31, name:"鮎喰川（コンビニ近く）",cat:"shade",   lat:33.96814206,lng:134.3544245,note:"深いので上級者向け",hours:"なし",closed:""},
-  {id:34, name:"温泉近くの川",         cat:"shade",    lat:33.97135022,lng:134.3697666,note:"",hours:"なし",closed:""},
-  {id:13, name:"HOMEとOFFICEの間の道",cat:"danger",   lat:33.97354626,lng:134.3618199,note:"陰になる場所がなく熱いかも。",hours:"なし",closed:""},
-  {id:14, name:"道の駅へのみち",       cat:"danger",   lat:33.97350849,lng:134.3668005,note:"",hours:"なし",closed:""},
-  {id:35, name:"ファミマ・城西のみち", cat:"danger",   lat:33.96876529,lng:134.3468778,note:"遮蔽物がなく気温が上がりがちです。",hours:"なし",closed:""},
-  {id:36, name:"寄井座のみち",         cat:"danger",   lat:33.96740281,lng:134.3467554,note:"遮蔽物がなく気温が上がりがちです。",hours:"なし",closed:""},
-  {id:18, name:"おうち診療所",         cat:"hospital", lat:33.97407046,lng:134.3692111,note:"",hours:"9:00〜17:00",closed:"土曜日・日曜日"},
-  {id:16, name:"すだっちこクラブ",     cat:"rest",     lat:33.96972671,lng:134.3583497,note:"学童",hours:"特定不可",closed:""},
-  {id:19, name:"鮎喰川コモン",         cat:"rest",     lat:33.97080264,lng:134.3612932,note:"",hours:"9:00〜18:00",closed:"火曜日"},
-  {id:20, name:"大粟山神社",           cat:"rest",     lat:33.97285389,lng:134.3682989,note:"",hours:"なし",closed:""},
-  {id:23, name:"森の学校みっけ",       cat:"rest",     lat:33.96812233,lng:134.3717757,note:"森の中にあるので避暑地。",hours:"特定不可",closed:""},
-  {id:24, name:"コットンフィールド",   cat:"rest",     lat:33.96920182,lng:134.3697624,note:"自然豊かなキャンプ場",hours:"24時間",closed:""},
-];
+let SPOTS = [];
+
+// GeoJSONのカテゴリ名を、アプリ内で使うカテゴリ名に変換します
+function normalizeCategory(category = '') {
+  if (category.includes('病院')) return 'hospital';
+  if (category.includes('自販機')) return 'vending';
+  if (category.includes('アチアチ日向')) return 'danger';
+  if (category.includes('激アツ日陰')) return 'shade';
+  if (category.includes('休憩')) return 'rest';
+  if (category.includes('お店')) return 'shop';
+  return 'rest';
+}
+
+// GeoJSONの座標を緯度・経度へ変換します
+// 現在のファイルが [緯度, 経度] でも、標準の [経度, 緯度] でも動くようにしています
+function getLatLng(coordinates = []) {
+  const [first, second] = coordinates;
+
+  if (Math.abs(first) <= 90 && Math.abs(second) > 90) {
+    return { lat: first, lng: second };
+  }
+
+  return { lat: second, lng: first };
+}
+
+async function loadSpots() {
+  try {
+    const response = await fetch('./pro_enn.geojson');
+
+    if (!response.ok) {
+      throw new Error(`GeoJSONの取得に失敗しました: ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    SPOTS = data.features
+      .filter(feature => feature.geometry?.type === 'Point')
+      .map(feature => {
+        const p = feature.properties || {};
+        const { lat, lng } = getLatLng(feature.geometry.coordinates);
+
+        return {
+          id: p.id ?? '',
+          name: p.name || '名称なし',
+          cat: normalizeCategory(p.Category),
+          lat,
+          lng,
+          note: p.other || '',
+          hours: p.time || 'なし',
+          closed: p.off && p.off !== 'なし' ? p.off : ''
+        };
+      })
+      .filter(spot => Number.isFinite(spot.lat) && Number.isFinite(spot.lng));
+
+    initMap();
+  } catch (error) {
+    console.error(error);
+    alert('スポットデータを読み込めませんでした。index.htmlとpro_enn.geojsonが同じ場所にあるか確認してください。');
+    initMap();
+  }
+}
 
 const CAT={
   shade:   {e:"🌳",label:"激アツ日陰",  color:"#059669",tc:"t-shade",   pc:"sp-shade",   can:["🌳 日陰を通れる","🌡️ 体感温度が下がる"]},
@@ -756,7 +683,7 @@ function toggleWeather() {
   else if (!weatherExpanded) alert.style.display = 'none';
 }
 
-initMap();
+loadSpots();
 </script>
 </body>
 </html>
